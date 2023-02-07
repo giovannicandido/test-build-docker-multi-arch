@@ -38,4 +38,6 @@ workflows:
     version: 2
     build-and-push-multi-arch-image:
         jobs:
-            - build
+            - build:
+                context:
+                  - Docker Registry
