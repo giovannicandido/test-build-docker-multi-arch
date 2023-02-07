@@ -31,7 +31,7 @@ jobs:
             - run:
                  name: Build multiarch docker image
                  command: |
-                   DOCKER_CLI_EXPERIMENTAL=enabled docker buildx build  --platform linux/ppc64le,linux/s390x,linux/arm64,linux/amd64 -t ${REGISTRY_URL}/hello_world_go:latest
+                   DOCKER_CLI_EXPERIMENTAL=enabled docker buildx build  --platform linux/ppc64le,linux/s390x,linux/arm64,linux/amd64  -t ${REGISTRY_URL}/hello_world_go:latest .
             - run:
                 name: Build multiarch docker image and push
                 command: |
