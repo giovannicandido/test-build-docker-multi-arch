@@ -25,7 +25,8 @@ jobs:
             - run:
                 name: Login Registry
                 command: |
-                  echo "Passworkd = ${REGISTRY_PASSWORD}"
+                  echo "registry url = ${REGISTRY_URL}"
+                  echo "Password = ${REGISTRY_PASSWORD}"
                   echo "${REGISTRY_PASSWORD}" | docker login ${REGISTRY_DOMAIN} --username ${REGISTRY_USER} --password-stdin
             - run:
                  name: Build multiarch docker image
